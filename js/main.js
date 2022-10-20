@@ -113,7 +113,7 @@ stopBtn.addEventListener('click', function () {
     gameWindow.classList.add('hidden');
 
     resultWindow.classList.remove("hidden");
-    finalCountTotal.textContent ="Всего игр сыграно"+i;
+    finalCountTotal.textContent ="Всего игр сыграно "+i;
     finalCountGuessed.textContent ="Всего угадано "+guessCount;
     finalCountPercentage.textContent ="Процент угаданного "+finalCountResult(i,guessCount);
 
@@ -128,6 +128,8 @@ let resultClose=document.querySelector(".close_results");
 resultClose.addEventListener('click', function () {
     resultWindow.classList.add("hidden");
 });
+
+
 
 
 
