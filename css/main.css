@@ -37,6 +37,7 @@ body{
 }
 .rules_popup__wrapper{
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 3rem;
     background-color: #ffebe6;
