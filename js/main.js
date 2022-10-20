@@ -34,13 +34,8 @@ playBtn.addEventListener('click', function () {
     // document.querySelector('body').classList.toggle('fixed');
 });
 
-let stopBtn = document.querySelector(".stop");
 
-stopBtn.addEventListener('click', function () {
-    gameWindow.classList.add('hidden');
-    outputEl.textContent ="";
-    // document.querySelector('body').classList.toggle('fixed');
-});
+
 
 
 
@@ -53,6 +48,17 @@ let ans;
 let corrAns;
 let manAns;
 let n;
+let i=0;
+let guessCount=0;
+
+
+
+
+let finalCountResult = function(){
+
+    finalCount = Math.round((guessCount*100/i),1);
+    return(finalCount);
+};
 
 
 let submitBtn = document.querySelector(".submit");
@@ -73,6 +79,7 @@ let play= function() {
 
     if (manAns==corrAns){
         outputEl.textContent ="Точно! Откуда ты знал, что число "+n+"?";
+        guessCount++;
         return;
     } else {outputEl.textContent= "Ошибочка вышла, число-то "+n+"!";
         return;
@@ -82,25 +89,45 @@ let play= function() {
 submitBtn.addEventListener('click', function () {
     manAns = true;
     console.log(manAns);
-
     play(manAns);
+    i++;
 });
 
 rejectBtn.addEventListener('click', function () {
     manAns = false;
     console.log(manAns);
     play(manAns);
+    i++;
+});
+
+
+let finalCountTotal = document.querySelector(".game_total");
+let finalCountGuessed = document.querySelector(".game_guessed");
+let finalCountPercentage= document.querySelector(".game_percentage");
+let resultWindow = document.querySelector(".game_result");
+
+// остановка игры, подведение итогов.
+let stopBtn = document.querySelector(".stop");
+
+stopBtn.addEventListener('click', function () {
+    gameWindow.classList.add('hidden');
+
+    resultWindow.classList.remove("hidden");
+    finalCountTotal.textContent ="Всего игр сыграно"+i;
+    finalCountGuessed.textContent ="Всего угадано "+guessCount;
+    finalCountPercentage.textContent ="Процент угаданного "+finalCountResult(i,guessCount);
+
+    // document.querySelector('body').classList.toggle('fixed');
 });
 
 
 
 
+let resultClose=document.querySelector(".close_results");
 
-
-
-
-
-
+resultClose.addEventListener('click', function () {
+    resultWindow.classList.add("hidden");
+});
 
 
 
