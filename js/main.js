@@ -139,5 +139,3 @@ resultClose.addEventListener('click', function () {
 
 
 
-
-
