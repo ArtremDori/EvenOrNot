@@ -5,9 +5,12 @@
     <title>Games</title>
 
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-
 
 <section class="main">
     <button class="rules_btn btn">Посмотреть правила</button>
@@ -30,16 +33,20 @@
             <button class="reject btn">Нечетное</button>
 
         </div>
-        <button class="stop">Довольно</button>
+        <button class="stop btn">Довольно</button>
 
     </div>
 
     <div class="game_result hidden">
-        <string class="game_total"></string>
-        <string class="game_guessed"></string>
-        <string class="game_percentage"></string>
+        <div class="game_result__inner">
+            <string class="game_total"></string>
+            <string class="game_guessed"></string>
+            <string class="game_percentage"></string>
+        </div>
+
         <button class="close_results btn">Закрыть</button>
     </div>
+
 
 
 </section>
