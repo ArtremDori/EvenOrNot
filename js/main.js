@@ -1,6 +1,3 @@
-
-
-
 //показать правила
 let rulesPopup = document.querySelector(".rules_btn");
 let rulesPopupWindow = document.querySelector('.rules_popup__wrapper');
@@ -22,8 +19,6 @@ rulesPopupClose.addEventListener('click', function () {
 
 
 let outputEl = document.querySelector(".chosen_nmbr");
-
-
 let playBtn = document.querySelector(".play");
 let gameWindow = document.querySelector(".game_window");
 
@@ -33,13 +28,6 @@ playBtn.addEventListener('click', function () {
     gameWindow.classList.remove('hidden');
     // document.querySelector('body').classList.toggle('fixed');
 });
-
-
-
-
-
-
-
 
 
 
