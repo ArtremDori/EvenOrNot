@@ -1,4 +1,4 @@
-:root{
+  :root{
     --main_clr:#564154;
     --main_text_clr:#779FA1;
     --popup_window_clr:#88498F;
@@ -143,7 +143,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--bg_clr);
-    color: #FF5722;
+    color: var(--headers_clr);
 
     font-size: 1.5em;
     font-weight: 600;
@@ -178,7 +178,7 @@ body{
     background-color: var(--popup_window_clr);
     color: var(--btn_text_clr);
 
-    font-weight:80;
+    font-weight:800;
     margin-bottom: 2rem;
 
     z-index:2;
@@ -188,11 +188,6 @@ body{
     padding: 2rem 1rem;
     font-size:2rem;
 }
-
-
-
-
-
 
 
 
