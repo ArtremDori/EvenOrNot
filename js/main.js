@@ -116,3 +116,11 @@ let resultClose=document.querySelector(".close_results");
 resultClose.addEventListener('click', function () {
     resultWindow.classList.add("hidden");
 });
+
+
+
+
+
+
+
+
